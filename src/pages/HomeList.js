@@ -30,11 +30,3 @@ const HomeList = () => {
 
 export default HomeList;
 
-
-// const search = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Gin`;
-
-// useEffect(() => {
-//   fetch(search)
-//     .then(response => response.json())
-//     .then(json => setFilter(json))
-// }, [])
