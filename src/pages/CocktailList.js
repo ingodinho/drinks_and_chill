@@ -1,39 +1,54 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CocktailListItem from '../components/CocktailListItem';
-import { Link } from 'react-router-dom';
+import Search from '../components/Search';
 import './CocktailList.scss';
 
 const CocktailList = () => {
-	const { state: link } = useLocation();
+	const { state } = useLocation();
 	const [drinks, setDrinks] = useState([]);
-	const [filter, setFilter] = useState("");
+	const [search, setSearch] = useState('');
+	const [valid, setValid] = useState(true);
+	let link = state;
 
-	console.log(link)
+	const searchHandler = (e) => {
+        setSearch(e.target.value);
+    }
+
 	useEffect(() => {
+		if (search) {
+			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
+		}
+		else link = state;
 		fetch(link)
 			.then((response) => response.json())
-			.then((json) => setDrinks(json.drinks));
-	}, [link]);
+			.then((json) => {
+				if(json.drinks) {
+					setDrinks(json.drinks);
+					setValid(true);
+				}
+				!json.drinks && setValid(false);
+			});
+	}, [search]);
 
 
 	return (
-		<div className='cocktail_list'>
-
-			<input type="text" placeholder="type something" onChange={(event) => {
-				setFilter(event.target.value);
-			}} />
-			<Link to="/cocktails" state={`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${filter}`}><button>search</button></Link>
-
-			{drinks.map((el, i) => (
-				<CocktailListItem
-					className={`style${Math.floor((i % 6) + 1)} ${i % 2 === 0 ? 'item_left' : 'item_right'}`}
-					name={el.strDrink}
-					key={el.idDrink}
-					id={el.idDrink}
-					img={el.strDrinkThumb}
-				/>
-			))}
+		<div>
+			<Search 
+				searchHandler={searchHandler}
+				valid={valid}
+			/>
+			<div className="cocktail_list">
+				{drinks.map((el, i) => (
+					<CocktailListItem
+						className={`style${Math.floor((i % 6) + 1)} ${i % 2 === 0 ? 'item_left' : 'item_right'}`}
+						name={el.strDrink}
+						key={el.idDrink}
+						id={el.idDrink}
+						img={el.strDrinkThumb}
+					/>
+				))}
+			</div>
 
 		</div>
 	);

@@ -1,18 +1,17 @@
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 
-const Search = () => {
+const Search = (props) => {
 
     const [filter, setFilter] = useState('');
-    
+
 	return (
 		<>
 			<input
 				type='text'
 				placeholder='type something'
-				onChange={(event) => {
-					setFilter(event.target.value);
-				}}
+				onChange={props.searchHandler}
+                style={{color: !props.valid ? 'red' : 'black'}}
 			/>
 			<Link
 				to='/cocktails'
@@ -20,6 +19,7 @@ const Search = () => {
 			>
 				<button>search</button>
 			</Link>
+            {!props.valid && <p style={{color: 'black'}}>Eingabe hat keine neuen Treffer ergeben</p>}
 		</>
 	);
 };
