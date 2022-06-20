@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    color: #fff;
+    --clr-main: #262B46;
+    --clr-1: #6FC3DF;
+    --clr-2: #8D82C4;
+    --clr-3: #EC8D81;
+    --clr-4: #E7B788;
+    --clr-5: #8EA9E8;
+    --clr-6: #87C5A4;
+}
+
+.list_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
