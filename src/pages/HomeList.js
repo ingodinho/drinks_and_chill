@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
 
 const HomeList = () => {
-    const [drinks, setDrinks] = useState([]);
-    // console.log(categories);
     const [filter, setFilter] = useState("");
 
     return (
