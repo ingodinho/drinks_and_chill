@@ -1,0 +1,43 @@
+.cocktail_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img {
+        width: 50%;
+    }
+}
+
+.cocktail_list_item {
+    display: flex;
+
+    h3 {
+        writing-mode: vertical-rl
+    }
+}
+
+.left {
+    flex-direction: row;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.style1 {
+    background-color: red;
+}
+.style2 {
+    background-color: green;
+}
+.style3 {
+    background-color: blue;
+}
+.style4 {
+    background-color: yellow;
+}
+.style5 {
+    background-color: violet;
+}
+.style6 {
+    background-color: turquoise;
+}
+
