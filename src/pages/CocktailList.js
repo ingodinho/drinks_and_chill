@@ -1,6 +1,7 @@
 import { useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CocktailListItem from '../components/CocktailListItem';
+import './CocktailList.scss';
 
 const CocktailList = () => {
 	const { state: link } = useLocation();
@@ -13,9 +14,10 @@ const CocktailList = () => {
 	}, [link]);
 
 	return (
-		<div>
-			{drinks.map((el) => (
-				<CocktailListItem
+		<div className='cocktail_list'>
+			{drinks.map((el,i) => (
+				<CocktailListItem 
+                    className={`style${Math.floor((i % 6) + 1)} ${i % 2 === 0 ? 'left' : 'right'}`}
 					name={el.strDrink}
 					key={el.idDrink}
 					id={el.idDrink}

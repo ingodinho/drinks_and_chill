@@ -33,7 +33,7 @@ const categories = [
 		id: 6,
 		name: 'Random',
 		description: 'IPSUM DOLOR SIT AMET',
-		url: `https://www.thecocktaildb.com/api/json/v1/1/random`,
+		url: `https://www.thecocktaildb.com/api/json/v1/1/random.php`,
 	},
 ];
 
