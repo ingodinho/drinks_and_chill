@@ -19,18 +19,16 @@ const CocktailListItem = (props) => {
 			</div>
 			<AnimatePresence>
 				{isOpen && (
-					<motion.div className='modal'
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						exit={{opacity: 0}}
+					<DetailModal
+						id={props.id}
+						closeModal={closeModal}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
 						key={1}
-					>
-						<DetailModal id={props.id} closeModal={closeModal}/>
-					</motion.div>
+					/>
 				)}
-				{isOpen && (
-					<Backdrop closeModal={closeModal} key={2}/>
-				)}
+				{isOpen && <Backdrop closeModal={closeModal} key={2} />}
 			</AnimatePresence>
 		</>
 	);

@@ -1,0 +1,26 @@
+.detail_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 90%;
+    background-color: var(--clr-main);
+    z-index: 3;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+.modal_x {
+    text-align: right;
+    span {
+        display: inline-block;
+        margin: 0 0 0 auto;
+        text-align: right;
+        cursor: pointer;
+    }
+}
+
+.modal_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

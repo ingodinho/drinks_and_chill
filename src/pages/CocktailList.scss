@@ -3,18 +3,26 @@
     grid-template-columns: 1fr 1fr;
     img {
         width: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
 .cocktail_list_item {
     display: flex;
-
+    cursor: pointer;
     h3 {
+        font-family: var(--fnt-mont);
         writing-mode: vertical-rl
     }
 }
 
-.right {
+.item_left {
+    flex-direction: row;
+}
+
+.item_right {
     flex-direction: row-reverse;
 }
 
@@ -35,24 +43,6 @@
 }
 .style6 {
     background-color: var(--clr-6);
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 50vh;
-    background-color: var(--clr-main);
-    z-index: 2;
-    // box-shadow: 0 0 10px black;
-
-    span {
-        display: block;
-        text-align: right;
-        cursor: pointer;
-    }
 }
 
 .backdrop { 

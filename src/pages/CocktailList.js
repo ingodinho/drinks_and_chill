@@ -27,7 +27,7 @@ const CocktailList = () => {
 
 			{drinks.map((el, i) => (
 				<CocktailListItem
-					className={`style${Math.floor((i % 6) + 1)} ${i % 2 === 0 ? 'left' : 'right'}`}
+					className={`style${Math.floor((i % 6) + 1)} ${i % 2 === 0 ? 'item_left' : 'item_right'}`}
 					name={el.strDrink}
 					key={el.idDrink}
 					id={el.idDrink}
