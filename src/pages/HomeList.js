@@ -1,29 +1,23 @@
 import { useState, useEffect } from 'react';
+import categories from '../components/categories';
+import HomeListItems from '../components/HomeListItems';
 
 const HomeList = () => {
-
-    // const link = 'www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka';
-    // const link = 'www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
-    // const link = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka';
-    // const [cocktails, setCocktails] = useState([]);
-
-    // fetch("www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
-    //     .then(response => response.json())
-    //     .then(json => console.log(json.drinks))
-
-    const [drink, setDrink] = useState([]);
-
-    useEffect(() => {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-            .then((res) => res.json())
-            .then((json) => setDrink(json.drinks));
-    }, []);
-    console.log(drink);
-
+    const [drinks, setDrinks] = useState([]);
+    console.log(categories);
 
     return (
-        <div>TEST</div>
-    )
-}
+        <div className='home_list'>
+            {categories.map((el) => (
+                <HomeListItems
+                    key={el.id}
+                    name={el.name}
+                    desc={el.description}
+                    url={el.url}
+                />
+            ))}
+        </div>
+    );
+};
 
 export default HomeList;
