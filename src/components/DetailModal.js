@@ -10,7 +10,7 @@ const DetailModal = (props) => {
 		)
 			.then((response) => response.json())
 			.then((json) => setDetails(json.drinks[0]));
-	}, []);
+	}, [props.id]);
 
 	return (
 		<motion.div className='modal'>
