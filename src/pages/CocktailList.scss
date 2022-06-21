@@ -5,18 +5,45 @@
     img {
         width: 50%;
     }
+
+    grid-auto-rows: 1fr;
 }
 
 .cocktail_list_item {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-block: 2rem;
+}
+
+.cocktail_list_item_img {
+    width: 60%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cocktail_list_item_name {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 
     h3 {
+        font-family: var(--fnt-mont);
+        font-size: 2.8rem;
         writing-mode: vertical-rl
     }
 }
 
-.right {
+.item_left {
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+.item_right {
     flex-direction: row-reverse;
+    padding-right: 10%;
 }
 
 //GIN

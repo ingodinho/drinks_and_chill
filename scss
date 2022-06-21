@@ -8,6 +8,7 @@
 
 :root {
     font-size: 62.5%;
+    color: #fff;
     --clr-main: #262B46;
     --clr-1: #6FC3DF;
     --clr-2: #8D82C4;
@@ -18,12 +19,6 @@
 
     --fnt-play: 'Playfair Display', serif;
     --fnt-mont: 'Montserrat', sans-serif;
-}
-
-body {
-    background-color: var(--clr-main);
-    font-family: var(--fnt-mont);
-    color: #fff;
 }
 
 // =========================================================================
@@ -37,7 +32,6 @@ body {
         font-size: 5rem;
         font-weight: 700;
     }
-
     p {
         font-size: 1.4rem;
     }
@@ -58,50 +52,4 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 32rem;
     align-items: stretch;
-}
-
-.addYourCocktail_container {
-    background-color: #262B46;
-    padding-left: 20px;
-
-    a {
-        color: white;
-    }
-
-    form div input,
-    form div textarea {
-        width: 50%;
-    }
-
-
-
-}
-
-.navbarMenu {
-    padding: 20px;
-    text-align: right;
-    position: absolute;
-    top: 0;
-    right: 2%;
-
-    button {
-        border: none;
-        background-color: #262B46;
-        color: white;
-        font-family: Montserrat;
-    }
-
-    nav {
-        margin-top: 2%;
-    }
-
-    nav ul {
-        list-style: none;
-    }
-
-    nav ul li {
-        line-height: 1.5;
-    }
-
-
 }
