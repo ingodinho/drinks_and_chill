@@ -1,6 +1,6 @@
 const categories = [
 	{
-		id: 1,
+		idDrink: 1,
 		name: 'Gin',
 		description: 'IPSUM DOLOR SIT AMET',
 		url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin`,
