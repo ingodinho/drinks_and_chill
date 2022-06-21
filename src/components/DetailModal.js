@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './DetailModal.scss';
+import {X} from 'phosphor-react';
 
 const DetailModal = (props) => {
 	const [details, setDetails] = useState([]);
@@ -32,7 +33,7 @@ const DetailModal = (props) => {
 				className='modal_flex'
 				>
 				<div className='modal_x'>
-					<span onClick={props.closeModal}>X</span>
+					<span onClick={props.closeModal}><X size={32} color="#fff"/></span>
 				</div>
 				<div className='modal_grid'>
 					<div className="modal_grid_img_div"><img src={details.strDrinkThumb} alt='' className='modal_grid_img'/></div>
