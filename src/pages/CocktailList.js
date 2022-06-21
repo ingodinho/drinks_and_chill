@@ -9,14 +9,14 @@ const CocktailList = () => {
 	const [drinks, setDrinks] = useState([]);
 	const [filter, setFilter] = useState("");
 
-	console.log(link)
+	// console.log(link)
 	useEffect(() => {
 		fetch(link)
 			.then((response) => response.json())
 			.then((json) => setDrinks(json.drinks));
 	}, [link]);
 
-
+	// console.log(drinks)
 	return (
 		<div className='cocktail_list'>
 
