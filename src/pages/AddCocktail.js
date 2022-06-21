@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import drinks from '../components/AddCocktailItem'
+import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const AddCocktail = () => {
     const [strDrink, setStrDrink] = useState("");
@@ -35,6 +37,7 @@ const AddCocktail = () => {
 
     return (
         <div className="addYourCocktail_container">
+            <Navbar />
             <article>
                 <h2> Cocktails & Drinks!</h2>
                 <p>Welcome to the world of Cocktails & Drinks!</p>
@@ -131,7 +134,7 @@ const AddCocktail = () => {
             <div className="div_img1"></div>
             <div className="div_img2"></div>
             <div className="div_img"></div>
-            <h1></h1>
+            <Link to="/" >Back to Home</Link>
         </div >
     )
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
+import Navbar from '../components/Navbar';
 import AddCocktail from '../pages/AddCocktail';
 
 const HomeList = () => {
