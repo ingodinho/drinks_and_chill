@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import CocktailListItem from '../components/CocktailListItem';
 import Search from '../components/Search';
 import './CocktailList.scss';
+import {motion} from 'framer-motion';
 
 const CocktailList = () => {
 	const { state } = useLocation();
@@ -33,7 +34,12 @@ const CocktailList = () => {
 
 
 	return (
-		<div>
+		<motion.div 
+		initial={{ opacity: 0,  y: '-10vh', x: '0' }}
+		animate={{ opacity: 1,  y: '0', x: '0'  }}
+		exit={{ opacity: 0,  y: '10vh', x: '0'  }}
+		key={2}
+		>
 			<Search 
 				searchHandler={searchHandler}
 				valid={valid}
@@ -50,7 +56,7 @@ const CocktailList = () => {
 				))}
 			</div>
 
-		</div>
+		</motion.div>
 	);
 };
 
