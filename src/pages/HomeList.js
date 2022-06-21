@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import HomeListItems from '../components/HomeListItems';
 import Search from '../components/Search';
 import { motion } from 'framer-motion';
+import {Link} from 'react-router-dom';
 
 const HomeList = () => {
 	const [list, setList] = useState([]);
@@ -48,8 +49,9 @@ const HomeList = () => {
 						/>
 					))}
 			</div>
+			<Link to="/addCocktail" className='addcoke'>Add Cocktail</Link>
 		</motion.div>
-	);
-};
+	)};
+
 
 export default HomeList;

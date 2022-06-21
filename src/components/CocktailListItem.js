@@ -34,7 +34,7 @@ const CocktailListItem = (props) => {
 				{isOpen && (
 					<motion.div
 						className='detail_modal'
-						// variants={modal}
+						variants={modal}
 						initial='hidden'
 						animate='visible'
 						key={1}
@@ -42,8 +42,9 @@ const CocktailListItem = (props) => {
 						<DetailModal id={props.id} closeModal={closeModal} />
 					</motion.div>
 				)}
-				{isOpen && <Backdrop closeModal={closeModal} key={2} />}
-				{/* {isOpen && <DetailModal id={props.id} closeModal={closeModal}/>} */}
+				{isOpen && (
+					<Backdrop closeModal={closeModal} key={2} />
+				)}
 			</AnimatePresence>
 		</>
 	);

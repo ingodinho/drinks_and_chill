@@ -32,7 +32,7 @@ const CocktailList = () => {
 			});
 	}, [search]);
 
-
+	// console.log(drinks)
 	return (
 		<motion.div 
 		initial={{ opacity: 0}}
