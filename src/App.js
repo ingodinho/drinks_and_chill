@@ -6,6 +6,7 @@ import CocktailList from './pages/CocktailList';
 import { AnimatePresence } from 'framer-motion';
 import AddCocktail from './pages/AddCocktail';
 import Search from './components/Search';
+import Navbar from './components/Navbar';
 
 function App() {
 	const [search, setSearch] = useState('');
@@ -23,6 +24,7 @@ function App() {
 
 	return (
 		<div className='App'>
+
 			{location.pathname !== '/addCocktail' && (
 				<Search searchHandler={searchHandler} valid={valid} />
 			)}

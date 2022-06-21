@@ -76,7 +76,6 @@ const AddCocktail = () => {
                         value={strInstructions}
                         onChange={(e) => setStrInstructions(e.target.value)}
                         cols="30" rows="10">
-
                     </textarea>
                 </div>
                 <div className="addIngredient1">
@@ -127,14 +126,14 @@ const AddCocktail = () => {
                         value={strMeasure3}
                         onChange={(e) => setStrMeasure3(e.target.value)} />
                 </div>
-                <div>
+                <div className="submitBtn">
                     <input type="submit" value="Submit" />
                 </div>
             </form>
             <div className="div_img1"></div>
             <div className="div_img2"></div>
             <div className="div_img"></div>
-            <Link to="/" >Back to Home</Link>
+            <Link to="/">Back to Home</Link>
         </div >
     )
 }

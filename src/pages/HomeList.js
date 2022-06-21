@@ -1,12 +1,13 @@
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
-import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const HomeList = () => {
 
     return (
+
         <motion.div
             className='home_list'
             initial={{ opacity: 0 }}
@@ -14,6 +15,7 @@ const HomeList = () => {
             exit={{ opacity: 0 }}
             key={1}
         >
+            <Navbar />
             <div className='list_grid'>
                 {categories.map((el, i) => (
                     <HomeListItems
