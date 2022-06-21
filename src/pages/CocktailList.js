@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CocktailListItem from '../components/CocktailListItem';
 import './CocktailList.scss';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const CocktailList = (props) => {
 	const { state } = useLocation();
@@ -18,7 +18,7 @@ const CocktailList = (props) => {
 		fetch(link)
 			.then((response) => response.json())
 			.then((json) => {
-				if(json.drinks) {
+				if (json.drinks) {
 					setDrinks(json.drinks);
 					props.validHandler(true);
 				}
@@ -27,11 +27,11 @@ const CocktailList = (props) => {
 	}, [props.search]);
 
 	return (
-		<motion.div 
-		initial={{ opacity: 0}}
-		animate={{ opacity: 1}}
-		exit={{ opacity: 0}}
-		key={2}
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			key={2}
 		>
 			<div className="cocktail_list">
 				{drinks.map((el, i) => (

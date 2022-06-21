@@ -37,6 +37,7 @@ body {
         font-size: 5rem;
         font-weight: 700;
     }
+
     p {
         font-size: 1.4rem;
     }
@@ -62,8 +63,45 @@ a {
 .addYourCocktail_container {
     background-color: #262B46;
     padding-left: 20px;
+
+    a {
+        color: white;
+    }
+
+    form div input,
+    form div textarea {
+        width: 50%;
+    }
+
+
+
 }
 
-.addcoke {
-    color: black;
+.navbarMenu {
+    padding: 20px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 2%;
+
+    button {
+        border: none;
+        background-color: #262B46;
+        color: white;
+        font-family: Montserrat;
+    }
+
+    nav {
+        margin-top: 2%;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        line-height: 1.5;
+    }
+
+
 }
