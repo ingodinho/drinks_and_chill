@@ -1,6 +1,8 @@
 import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
+import {CaretDoubleDown} from 'phosphor-react';
+import './Search.scss';
 
 const Search = (props) => {
 	const [filter, setFilter] = useState('');
@@ -38,6 +40,9 @@ const Search = (props) => {
 					Eingabe hat keine neuen Treffer ergeben
 				</p>
 			)}
+			<div className="caret_double">
+				<CaretDoubleDown size={32} color="#fff" className='caret_double_icon'/>
+			</div>
 		</>
 	);
 };

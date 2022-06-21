@@ -7,13 +7,14 @@ import {motion} from 'framer-motion';
 const CocktailList = (props) => {
 	const { state } = useLocation();
 	const [drinks, setDrinks] = useState([]);
-	let link = state;
+	const [link, setLink] = useState(state)
+	// let link = state;
 
 	useEffect(() => {
 		if (props.search) {
-			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${props.search}`;
+			setLink(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${props.search}`);
 		}
-		else link = state;
+		else setLink(state);
 		fetch(link)
 			.then((response) => response.json())
 			.then((json) => {
