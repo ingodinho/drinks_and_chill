@@ -8,7 +8,6 @@
 
 :root {
     font-size: 62.5%;
-    color: #fff;
     --clr-main: #262B46;
     --clr-1: #6FC3DF;
     --clr-2: #8D82C4;
@@ -16,9 +15,15 @@
     --clr-4: #E7B788;
     --clr-5: #8EA9E8;
     --clr-6: #87C5A4;
-
+    
     --fnt-play: 'Playfair Display', serif;
     --fnt-mont: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--clr-main);
+    font-family: var(--fnt-mont);
+    color: #fff;
 }
 
 // =========================================================================

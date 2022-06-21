@@ -1,29 +1,43 @@
 .cocktail_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    img {
-        width: 50%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        object-position: center;
-    }
+    grid-auto-rows: 1fr;
 }
 
 .cocktail_list_item {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
+    padding-block: 5rem;
+}
+
+.cocktail_list_item_img {
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cocktail_list_item_name {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
     h3 {
         font-family: var(--fnt-mont);
+        font-size: 2.8rem;
         writing-mode: vertical-rl
     }
 }
 
 .item_left {
     flex-direction: row;
+    padding-left: 10%;
 }
 
 .item_right {
     flex-direction: row-reverse;
+    padding-right: 10%;
 }
 
 .style1 {
