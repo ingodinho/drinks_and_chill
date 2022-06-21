@@ -6,6 +6,7 @@ import './Search.scss';
 
 const Search = (props) => {
 	const [filter, setFilter] = useState('');
+	console.log(props.valid);
 	const location = useLocation();
 	const navigate = useNavigate();
 	const onchangeHandler = (e) => {

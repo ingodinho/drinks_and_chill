@@ -17,7 +17,7 @@ function App() {
 	};
 
 	const validHandler = (isValid) => {
-		setValid(isValid);
+		setValid(() => isValid);
 	};
 
 	const location = useLocation();
