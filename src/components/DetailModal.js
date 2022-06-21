@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './DetailModal.scss';
-import Backdrop from './Backdrop';
+import {X} from 'phosphor-react';
 
 const DetailModal = (props) => {
 	const [details, setDetails] = useState([]);
@@ -15,27 +15,28 @@ const DetailModal = (props) => {
 			.then((json) => setDetails(json.drinks[0]));
 	}, [props.id]);
 
-	const modalAnimation = {
-		hidden: {
-			opacity: 0
-		},
-		visible: {
-			opacity: 1
-		},
-		exit: {
-			opacity: 0
-		}
-	}
+	// const modalAnimation = {
+	// 	hidden: {
+	// 		opacity: 0
+	// 	},
+	// 	visible: {
+	// 		opacity: 1
+	// 	},
+	// 	exit: {
+	// 		opacity: 0
+	// 	}
+	// }
 
 	return (
 			<motion.div
 				onClick={e => e.stopPropagation()}
+				className='modal_flex'
 				>
 				<div className='modal_x'>
-					<span onClick={props.closeModal}>X</span>
+					<span onClick={props.closeModal}><X size={32} color="#fff"/></span>
 				</div>
 				<div className='modal_grid'>
-					<img src={details.strDrinkThumb} alt='' />
+					<div className="modal_grid_img_div"><img src={details.strDrinkThumb} alt='' className='modal_grid_img'/></div>
 					<article className='modal_article'>
 						<h1>{details.strDrink}</h1>
 						<h2>Ingredients</h2>
@@ -67,7 +68,7 @@ const DetailModal = (props) => {
 						<p>
 							{details.strMeasure9} {details.strIngredient9}
 						</p>
-						<p>{details.strInstructions}</p>
+						<p className='modal_article_description'>{details.strInstructions}</p>
 					</article>
 				</div>
 			</motion.div>

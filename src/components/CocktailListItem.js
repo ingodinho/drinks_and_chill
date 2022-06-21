@@ -27,8 +27,10 @@ const CocktailListItem = (props) => {
 				className={`cocktail_list_item style ${props.className}`}
 				onClick={() => setisOpen(!isOpen)}
 			>
-				<img src={props.img} alt='cocktail' />
-				<h3>{props.name}</h3>
+				<img src={props.img} alt='cocktail' className='cocktail_list_item_img'/>
+				<div className="cocktail_list_item_name">
+					<h3>{props.name}</h3>
+				</div>
 			</motion.div>
 			<AnimatePresence exitBeforeEnter>
 				{isOpen && (
