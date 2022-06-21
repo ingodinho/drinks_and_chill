@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import HomeList from './pages/HomeList';
 import CocktailList from './pages/CocktailList';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 import AddCocktail from './pages/AddCocktail';
 import Search from './components/Search';
@@ -24,7 +26,7 @@ function App() {
 
 	return (
 		<div className='App'>
-
+			<Header />
 			{location.pathname !== '/addCocktail' && (
 				<Search searchHandler={searchHandler} valid={valid} />
 			)}
@@ -43,6 +45,7 @@ function App() {
 					<Route path='/addCocktail' element={<AddCocktail />} />
 				</Routes>
 			</AnimatePresence>
+			<Footer />
 		</div>
 	);
 }
