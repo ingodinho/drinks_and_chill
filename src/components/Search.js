@@ -6,14 +6,16 @@ const Search = (props) => {
 	const [filter, setFilter] = useState('');
 	const location = useLocation();
 	const navigate = useNavigate();
-	console.log(navigate);
-	console.log(location);
 	const onchangeHandler = (e) => {
+		if(e.target.value === '') {
+			navigate('/');
+			return;
+		}
 		if(location.pathname === '/cocktails') {
-			props.searchHandlerCocktail(e.target.value);
+			props.searchHandler(e.target.value);
 		} else if (location.pathname === '/') {
 			navigate('/cocktails');
-			props.searchHandlerCocktail(e.target.value);
+			props.searchHandler(e.target.value);
 		}
 	};
 	return (

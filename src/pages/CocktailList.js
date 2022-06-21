@@ -1,24 +1,17 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CocktailListItem from '../components/CocktailListItem';
-import Search from '../components/Search';
 import './CocktailList.scss';
 import {motion} from 'framer-motion';
 
-const CocktailList = () => {
+const CocktailList = (props) => {
 	const { state } = useLocation();
 	const [drinks, setDrinks] = useState([]);
-	const [search, setSearch] = useState('');
-	const [valid, setValid] = useState(true);
 	let link = state;
 
-	const searchHandler = (e) => {
-        setSearch(e);
-    }
-
 	useEffect(() => {
-		if (search) {
-			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
+		if (props.search) {
+			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${props.search}`;
 		}
 		else link = state;
 		fetch(link)
@@ -26,13 +19,12 @@ const CocktailList = () => {
 			.then((json) => {
 				if(json.drinks) {
 					setDrinks(json.drinks);
-					setValid(true);
+					props.validHandler(true);
 				}
-				!json.drinks && setValid(false);
+				!json.drinks && props.validHandler(false);
 			});
-	}, [search]);
+	}, [props.search]);
 
-	// console.log(drinks)
 	return (
 		<motion.div 
 		initial={{ opacity: 0}}
@@ -40,10 +32,6 @@ const CocktailList = () => {
 		exit={{ opacity: 0}}
 		key={2}
 		>
-			<Search 
-				searchHandlerCocktail={searchHandler}
-				valid={valid}
-			/>
 			<div className="cocktail_list">
 				{drinks.map((el, i) => (
 					<CocktailListItem

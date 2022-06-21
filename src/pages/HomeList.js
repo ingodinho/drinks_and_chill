@@ -1,30 +1,9 @@
 import categories from '../components/categories';
-import { useState, useEffect } from 'react';
 import HomeListItems from '../components/HomeListItems';
-import Search from '../components/Search';
 import { motion } from 'framer-motion';
 import {Link} from 'react-router-dom';
 
 const HomeList = () => {
-	const [list, setList] = useState([]);
-	const [search, setSearch] = useState('');
-	const searchHandler = (e) => {
-		setSearch(e.target.value);
-	};
-
-	useEffect(() => {
-		if (search) {
-			fetch(
-				`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
-			)
-				.then((response) => response.json())
-				.then((json) => setList(json.drinks));
-		} else {
-			setList(categories);
-		}
-	}, [search]);
-	console.log(search);
-	console.log(list);
 
 	return (
 		<motion.div
@@ -34,10 +13,8 @@ const HomeList = () => {
 			exit={{ opacity: 0 }}
             key={1}
 		>
-			<Search searchHandler={searchHandler} value={search}/>
 			<div className='list_grid'>
-				{!search &&
-					list.map((el, i) => (
+				{ categories.map((el, i) => (
 						<HomeListItems
 							className={`style${Math.floor((i % 6) + 1)} ${
 								i % 2 === 0 ? 'left' : 'right'
