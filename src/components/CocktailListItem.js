@@ -34,7 +34,7 @@ const CocktailListItem = (props) => {
 				{isOpen && (
 					<motion.div
 						className='detail_modal'
-						variants={modal}
+						// variants={modal}
 						initial='hidden'
 						animate='visible'
 						key={1}

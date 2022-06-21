@@ -10,7 +10,6 @@ const Backdrop = (props) => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 		>
-			{props.children}
 		</motion.div>
 	);
 };

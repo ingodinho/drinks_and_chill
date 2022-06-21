@@ -28,12 +28,12 @@ const HomeList = () => {
 	return (
 		<motion.div
 			className='home_list'
-			initial={{ opacity: 0,  y: '-20vh', x: '0' }}
-			animate={{ opacity: 1,  y: '0', x: '0'  }}
-			exit={{ opacity: 0,  y: '20vh', x: '0'  }}
+			initial={{ opacity: 0}}
+			animate={{ opacity: 1}}
+			exit={{ opacity: 0 }}
             key={1}
 		>
-			<Search searchHandler={searchHandler} />
+			<Search searchHandler={searchHandler} value={search}/>
 			<div className='list_grid'>
 				{!search &&
 					list.map((el, i) => (

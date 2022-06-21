@@ -13,7 +13,7 @@ const CocktailList = () => {
 	let link = state;
 
 	const searchHandler = (e) => {
-        setSearch(e.target.value);
+        setSearch(e);
     }
 
 	useEffect(() => {
@@ -35,13 +35,13 @@ const CocktailList = () => {
 
 	return (
 		<motion.div 
-		initial={{ opacity: 0,  y: '-10vh', x: '0' }}
-		animate={{ opacity: 1,  y: '0', x: '0'  }}
-		exit={{ opacity: 0,  y: '10vh', x: '0'  }}
+		initial={{ opacity: 0}}
+		animate={{ opacity: 1}}
+		exit={{ opacity: 0}}
 		key={2}
 		>
 			<Search 
-				searchHandler={searchHandler}
+				searchHandlerCocktail={searchHandler}
 				valid={valid}
 			/>
 			<div className="cocktail_list">
