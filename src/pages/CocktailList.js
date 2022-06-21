@@ -18,12 +18,14 @@ const CocktailList = () => {
 
 
 	return (
-		<div className='cocktail_list'>
 
-			<input type="text" placeholder="type something" onChange={(event) => {
+		<div className='cocktail_list'>
+			<input className='inputFeld' type="text" placeholder="type something" onChange={(event) => {
 				setFilter(event.target.value);
 			}} />
-			<Link to="/cocktails" state={`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${filter}`}><button>search</button></Link>
+			<Link to="/cocktails" state={`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${filter}`}>
+				<button className="searchButton">Search</button>
+			</Link>
 
 			{drinks.map((el, i) => (
 				<CocktailListItem

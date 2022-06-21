@@ -1,0 +1,35 @@
+.header {
+    height: 30vh;
+    background: #262B46;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.p1Nav {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.p2Nav {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerTextSection {
+    margin: 100px 50px;
+}
+
+.h1Header {
+    font-size: 4.5rem;
+    padding-bottom: 5px;
+}
+
+.pHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+}
