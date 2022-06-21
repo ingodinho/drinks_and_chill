@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
+import AddCocktail from '../pages/AddCocktail';
 
 const HomeList = () => {
     const [filter, setFilter] = useState('');
 
     return (
         <div className='home_list list_grid'>
+
             <input
                 type='text'
                 placeholder='type something'
@@ -33,14 +35,13 @@ const HomeList = () => {
                     filter={filter}
                 />
             ))}
+            <Link to="addCocktail">Add Cocktail</Link>
         </div>
     );
 };
 
 export default HomeList;
 
-<<<<<<< HEAD
-=======
 // const search = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Gin`;
 
 // useEffect(() => {
@@ -48,4 +49,3 @@ export default HomeList;
 //     .then(response => response.json())
 //     .then(json => setFilter(json))
 // }, [])
->>>>>>> d9d51973480d9b997d709f5d234fd7042a7c1b53
