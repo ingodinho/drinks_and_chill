@@ -45,7 +45,7 @@ const Search = (props) => {
 						placeholder='search for your cocktail'
 						onChange={onchangeHandler}
 						onFocus={()=> setFocus(true)}
-						onBlur={() => setFocus(false)}
+						// onBlur={() => setFocus(false)}
 						style={inputStyles}
 						value={props.search}
 						className='search_input'

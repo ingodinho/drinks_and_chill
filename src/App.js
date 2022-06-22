@@ -8,6 +8,7 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
+import Navbar from './components/Navbar';
 
 function App() {
 	const [search, setSearch] = useState('');
