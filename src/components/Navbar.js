@@ -1,4 +1,4 @@
-import React from 'react'
+import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import {X} from 'phosphor-react';

@@ -1,19 +1,27 @@
 import { useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { CaretDoubleDown, MagnifyingGlass } from 'phosphor-react';
+import { CaretDoubleDown, MagnifyingGlass, Heart } from 'phosphor-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import './Search.scss';
 
 const Search = (props) => {
+	console.log(props);
 	const [focus, setFocus] = useState(false);
+	const [input, setInput] = useState('');
 	const location = useLocation();
 	const navigate = useNavigate();
-	const [input, setInput] = useState('');
+
+	const chooseBorder = () => {
+		if (focus && props.valid) return '2px #6FC3DF solid';
+		else if (focus && !props.valid) return '4px #e03131 solid';
+		else return 'none';
+	};
 
 	const inputStyles = {
-		color: !props.valid ? 'red' : 'black',
-		border: focus ? '2px #6FC3DF solid' : 'none',
+		color: !props.valid ? '#e03131' : 'black',
+		border: chooseBorder(),
+		transition: 'all 100ms linear',
 	};
 
 	const onchangeHandler = (e) => {
@@ -34,13 +42,12 @@ const Search = (props) => {
 	const onclickHandler = (e) => {
 		navigate('/cocktails');
 		props.searchHandler(e.target.textContent);
-		// setInput(e.target.textContent);
 	};
 
 	const animatedLi = {
-		initial: { opacity: 0},
-		animate: { opacity: 1},
-		exit: { opacity: 0},
+		initial: { opacity: 0 },
+		animate: { opacity: 1 },
+		exit: { opacity: 0 },
 	};
 
 	return (
@@ -53,7 +60,7 @@ const Search = (props) => {
 						placeholder='search for your cocktail'
 						onChange={onchangeHandler}
 						onFocus={() => setFocus(true)}
-						onBlur={() => setFocus(false)}
+						onBlur={() => setTimeout(() => setFocus(false), 200)}
 						style={inputStyles}
 						value={input}
 						className='search_input'
@@ -110,11 +117,20 @@ const Search = (props) => {
 					<h3>Sorry, your search seems invalid</h3>
 					<p>Please check your input again.</p>
 					<p>
-						Should your designated cocktail not be in our menu, we
-						would be happy, if you can add that to our database
+						Should your designated cocktail not be in our database,
+						we would be happy, if you can help us add it!{' '}
+						<Heart
+							size={24}
+							color='#e03131'
+							weight='fill'
+							style={{ verticalAlign: 'middle' }}
+						/>
 					</p>
 					<Link to={'/addcocktail'}>
-						<button className='add_cocktail_btn'>
+						<button
+							className='add_cocktail_btn'
+							onClick={() => props.validHandler(true)}
+						>
 							Add Cocktail
 						</button>
 					</Link>

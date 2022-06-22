@@ -1,0 +1,51 @@
+.head_menu_flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 5% 0 5%;
+}
+
+.navbarMenu {
+    font-family: 'Playfair Display', serif;
+
+    button {
+        border: none;
+        background-color: #262B46;
+        color: white;
+        font-family: Montserrat;
+        cursor: pointer;
+    }
+
+    nav {
+        margin-top: 2vh;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    .nav {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20vh;
+        height: 100vh;
+        background-color: #262B46;
+        width: 100vw;
+        transform: translateY(-150%);
+        position: absolute;
+        transition: transform 500ms;
+    }
+
+    .nav_active {
+        transform: translateY(0%);
+        z-index: 10;
+    }
+}
