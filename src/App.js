@@ -27,6 +27,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
+			<Navbar />
 			{location.pathname !== '/addCocktail' && (
 				<Search searchHandler={searchHandler} valid={valid} value={search}/>
 			)}
