@@ -15,6 +15,7 @@ function App() {
 	const [valid, setValid] = useState(true);
 
 	const searchHandler = (e) => {
+		console.log('searchhandler', e);
 		setSearch(e);
 	};
 
@@ -26,9 +27,9 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Header />
+			<Navbar />
 			{location.pathname !== '/addCocktail' && (
-				<Search searchHandler={searchHandler} valid={valid} />
+				<Search searchHandler={searchHandler} valid={valid} value={search}/>
 			)}
 			<AnimatePresence>
 				<Routes>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import drinks from '../components/AddCocktailItem'
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import './AddCocktail.scss';
 
 const AddCocktail = () => {
     const [strDrink, setStrDrink] = useState("");
@@ -22,8 +22,6 @@ const AddCocktail = () => {
             strDrink, strCategory, strDrinkThumb, strInstructions, strIngredient1, strIngredient2, strIngredient3, strMeasure1, strMeasure2, strMeasure3
         }
 
-        console.log(userAddCocktail);
-        console.log(drinks)
 
         fetch('http://localhost:3000/addCocktail', {
             method: 'POST',
@@ -37,103 +35,103 @@ const AddCocktail = () => {
 
     return (
         <div className="addYourCocktail_container">
-            <Navbar />
-            <article>
-                <h2> Cocktails & Drinks!</h2>
-                <p>Welcome to the world of Cocktails & Drinks!</p>
-            </article>
-
-            <form onSubmit={handleSubmit}>
-                <div className="addName">
-                    <input
-                        name="add"
-                        id="inputName"
-                        type="text"
-                        placeholder="Name"
-                        value={strDrink}
-                        onChange={(e) => setStrDrink(e.target.value)} />
+            <section className="addCocktailSection">
+                <form onSubmit={handleSubmit}>
+                    <div className="addName">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            id="inputName"
+                            type="text"
+                            placeholder="Name"
+                            value={strDrink}
+                            onChange={(e) => setStrDrink(e.target.value)} />
+                    </div>
+                    <div className="addCategory">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Category"
+                            value={strCategory}
+                            onChange={(e) => setStrCategory(e.target.value)} />
+                    </div>
+                    <div className="addURL">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Add your URL"
+                            value={strDrinkThumb}
+                            onChange={(e) => setStrDrinkThumb(e.target.value)} />
+                    </div>
+                    <div className="addInstructions">
+                        <textarea name="add"
+                            type="text"
+                            placeholder="Instructions"
+                            value={strInstructions}
+                            onChange={(e) => setStrInstructions(e.target.value)}
+                            cols="30" rows="10">
+                        </textarea>
+                    </div>
+                    <div className="addIngredient1">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Ingredient 1"
+                            value={strIngredient1}
+                            onChange={(e) => setStrIngredient1(e.target.value)} />
+                    </div>
+                    <div className="addMeasure1">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Measure Ingredient 1"
+                            value={strMeasure1}
+                            onChange={(e) => setStrMeasure1(e.target.value)} />
+                    </div>
+                    <div className="addIngredient2">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Ingredient 2"
+                            value={strIngredient2}
+                            onChange={(e) => setStrIngredient2(e.target.value)} />
+                    </div>
+                    <div className="addMeasure2">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Measure Ingredient 2"
+                            value={strMeasure2}
+                            onChange={(e) => setStrMeasure2(e.target.value)} />
+                    </div>
+                    <div className="addIngredient3">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Ingredient 3"
+                            value={strIngredient3}
+                            onChange={(e) => setStrIngredient3(e.target.value)} />
+                    </div>
+                    <div className="addMeasure3">
+                        <input className="inputFeldAdd"
+                            name="add"
+                            type="text"
+                            placeholder="Measure Ingredient 3"
+                            value={strMeasure3}
+                            onChange={(e) => setStrMeasure3(e.target.value)} />
+                    </div>
+                    <div className="submitBtn">
+                        <input className="submitAdd" type="submit" value="Submit" />
+                    </div>
+                </form>
+                <div className='goBackBttn'>
+                    <Link className="goBack" to="/"><span className='emojiPfeil'>⬅️ </span>Back to Home</Link>
                 </div>
-                <div className="addCategory">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Category"
-                        value={strCategory}
-                        onChange={(e) => setStrCategory(e.target.value)} />
+                <div className="divBilder">
+                    <div className="div_img1"></div>
+                    <div className="div_img2"></div>
+                    <div className="div_img3"></div>
                 </div>
-                <div className="addURL">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Add your URL"
-                        value={strDrinkThumb}
-                        onChange={(e) => setStrDrinkThumb(e.target.value)} />
-                </div>
-                <div className="addInstructions">
-                    <textarea name="add"
-                        type="text"
-                        placeholder="Instructions"
-                        value={strInstructions}
-                        onChange={(e) => setStrInstructions(e.target.value)}
-                        cols="30" rows="10">
-                    </textarea>
-                </div>
-                <div className="addIngredient1">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Ingredient 1"
-                        value={strIngredient1}
-                        onChange={(e) => setStrIngredient1(e.target.value)} />
-                </div>
-                <div className="addMeasure1">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Measure Ingredient 1"
-                        value={strMeasure1}
-                        onChange={(e) => setStrMeasure1(e.target.value)} />
-                </div>
-                <div className="addIngredient2">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Ingredient 2"
-                        value={strIngredient2}
-                        onChange={(e) => setStrIngredient2(e.target.value)} />
-                </div>
-                <div className="addMeasure2">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Measure Ingredient 2"
-                        value={strMeasure2}
-                        onChange={(e) => setStrMeasure2(e.target.value)} />
-                </div>
-                <div className="addIngredient3">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Ingredient 3"
-                        value={strIngredient3}
-                        onChange={(e) => setStrIngredient3(e.target.value)} />
-                </div>
-                <div className="addMeasure3">
-                    <input
-                        name="add"
-                        type="text"
-                        placeholder="Measure Ingredient 3"
-                        value={strMeasure3}
-                        onChange={(e) => setStrMeasure3(e.target.value)} />
-                </div>
-                <div className="submitBtn">
-                    <input type="submit" value="Submit" />
-                </div>
-            </form>
-            <div className="div_img1"></div>
-            <div className="div_img2"></div>
-            <div className="div_img"></div>
-            <Link to="/">Back to Home</Link>
+            </section >
         </div >
     )
 }

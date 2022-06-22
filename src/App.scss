@@ -64,6 +64,7 @@ a {
     background-color: #262B46;
     padding-left: 20px;
 
+
     a {
         color: white;
     }
@@ -72,23 +73,24 @@ a {
     form div textarea {
         width: 50%;
     }
+}
 
+// NAVIGATIONS MENU
 
-
+.head_menu_flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbarMenu {
-    padding: 20px;
-    text-align: right;
-    position: absolute;
-    top: 0;
-    right: 2%;
+    font-family: 'Playfair Display', serif;
 
     button {
         border: none;
         background-color: #262B46;
         color: white;
         font-family: Montserrat;
+        cursor: pointer;
     }
 
     nav {
@@ -101,7 +103,78 @@ a {
 
     nav ul li {
         line-height: 1.5;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
     }
 
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #262B46;
+        width: 100vw;
+        transform: translateY(-150%);
+        position: absolute;
+        transition: transform 500ms;
+    }
 
+    .nav_active {
+        transform: translateY(0%);
+        z-index: 10;
+    }
 }
+
+.addCokeDiv {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.addCokeDiv:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .list_grid {
+        grid-template-columns: 1fr;
+    }
+
+    // burger button
+    .Menu {
+        display: none;
+    }
+
+    .burger_container {
+        margin-top: 5%;
+    }
+
+    .burger {
+        position: relative;
+        cursor: pointer;
+        left: 85%;
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+    }
+
+    // DRINKS&CHILL 
+
+    .navbar {
+        // display: flex;
+        // justify-content: space-between;
+        font-size: 1.25rem;
+    }
+
+    .p1Nav {
+        letter-spacing: 2px;
+        margin: 0 auto;
+    }
+}
+
