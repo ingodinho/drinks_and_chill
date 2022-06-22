@@ -1,6 +1,6 @@
 import './App.scss';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import HomeList from './pages/HomeList';
 import Search from './components/Search';
@@ -33,7 +33,7 @@ function App() {
 			)}
 			<AnimatePresence>
 				<Routes>
-					<Route path='/' element={<HomeList search={search} />} />
+					<Route path='/' element={<HomeList search={search} searchHandler={searchHandler}/>} />
 					<Route
 						path='/cocktails'
 						element={
