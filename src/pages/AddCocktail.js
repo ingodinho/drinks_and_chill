@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import drinks from '../components/AddCocktailItem'
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import './AddCocktail.scss';
-import Header from '../components/Header';
 
 const AddCocktail = () => {
     const [strDrink, setStrDrink] = useState("");
@@ -24,8 +22,6 @@ const AddCocktail = () => {
             strDrink, strCategory, strDrinkThumb, strInstructions, strIngredient1, strIngredient2, strIngredient3, strMeasure1, strMeasure2, strMeasure3
         }
 
-        console.log(userAddCocktail);
-        console.log(drinks)
 
         fetch('http://localhost:3000/addCocktail', {
             method: 'POST',
@@ -39,7 +35,6 @@ const AddCocktail = () => {
 
     return (
         <div className="addYourCocktail_container">
-            <Navbar />
             <section className="addCocktailSection">
                 <form onSubmit={handleSubmit}>
                     <div className="addName">
