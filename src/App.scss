@@ -24,6 +24,7 @@ body {
     background-color: var(--clr-main);
     font-family: var(--fnt-mont);
     color: #fff;
+    max-width: 1440px;
 }
 
 // =========================================================================
@@ -71,7 +72,7 @@ a {
 
     form div input,
     form div textarea {
-        width: 50%;
+        width: 85%;
     }
 }
 
@@ -177,4 +178,3 @@ a {
         margin: 0 auto;
     }
 }
-
