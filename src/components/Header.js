@@ -5,7 +5,6 @@ const Header = () => {
         <div className="header">
             <nav className="navbar">
                 <p className='p1Nav'>DRINKS&CHILL</p>
-                <p className='p2Nav'>MENU</p>
             </nav>
             <section className="headerTextSection">
                 <h1 className="h1Header">Cocktails & <span> </span>Drinks!</h1>

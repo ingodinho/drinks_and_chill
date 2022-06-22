@@ -1,0 +1,100 @@
+.addCocktailSection {
+    margin-left: 50px;
+}
+
+.addName {
+    margin: 5px 0;
+}
+
+.addCategory {
+    margin: 5px 0;
+}
+
+.addURL {
+    margin: 5px 0;
+}
+
+.addInstructions {
+    margin: 5px 0;
+}
+
+.addIngredient1 {
+    margin: 5px 0;
+}
+
+.addMeasure1 {
+    margin: 5px 0;
+}
+
+.addIngredient2 {
+    margin: 5px 0;
+}
+
+.addMeasure2 {
+    margin: 5px 0;
+}
+
+.addIngredient3 {
+    margin: 5px 0;
+}
+
+.addMeasure3 {
+    margin: 5px 0;
+    margin-bottom: 25px;
+}
+
+.submitBtn {
+    margin-top: 5px;
+}
+
+.submitAdd {
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+    background-color: #8D82C4;
+}
+
+.inputFeldAdd {
+    padding: 6px;
+}
+
+.goBackBttn {
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 15px;
+}
+
+.goBack:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+
+.emojiPfeil:hover {
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #64819D;
+}
+
+
+.div_img1 {
+    position: relative;
+    content: url("../img/image\ 9.png");
+    left: 50vh;
+    top: -50vh;
+}
+
+.div_img2 {
+    position: relative;
+    content: url("../img/image\ 10.png");
+    left: 80vh;
+    top: -80vh;
+}
+
+.div_img3 {
+    position: relative;
+    content: url("../img/image\ 11.png");
+    left: 54vh;
+    top: -88vh;
+}

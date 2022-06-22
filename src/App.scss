@@ -102,6 +102,17 @@ a {
     nav ul li {
         line-height: 1.5;
     }
+}
 
+.addCokeDiv {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
 
+.addCokeDiv:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px whitesmoke;
 }
