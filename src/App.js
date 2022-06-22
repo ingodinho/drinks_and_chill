@@ -1,11 +1,13 @@
 import './App.scss';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import HomeList from './pages/HomeList';
-import CocktailList from './pages/CocktailList';
 import { AnimatePresence } from 'framer-motion';
-import AddCocktail from './pages/AddCocktail';
+import HomeList from './pages/HomeList';
+import Header from './components/Header';
 import Search from './components/Search';
+import Footer from './components/Footer';
+import CocktailList from './pages/CocktailList';
+import AddCocktail from './pages/AddCocktail';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -17,14 +19,14 @@ function App() {
 	};
 
 	const validHandler = (isValid) => {
-		setValid(isValid);
+		setValid(() => isValid);
 	};
 
 	const location = useLocation();
 
 	return (
 		<div className='App'>
-
+			<Header />
 			{location.pathname !== '/addCocktail' && (
 				<Search searchHandler={searchHandler} valid={valid} />
 			)}
@@ -43,6 +45,7 @@ function App() {
 					<Route path='/addCocktail' element={<AddCocktail />} />
 				</Routes>
 			</AnimatePresence>
+			<Footer />
 		</div>
 	);
 }

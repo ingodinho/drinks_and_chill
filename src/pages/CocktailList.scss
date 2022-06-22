@@ -1,6 +1,11 @@
 .cocktail_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    img {
+        width: 50%;
+    }
+
     grid-auto-rows: 1fr;
 }
 
@@ -23,10 +28,14 @@
     flex-grow: 1;
     display: flex;
     justify-content: center;
+
     h3 {
         font-family: var(--fnt-mont);
         font-size: 2.8rem;
-        writing-mode: vertical-rl
+        text-align: center;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        height: 26rem;
     }
 }
 
@@ -40,21 +49,45 @@
     padding-right: 10%;
 }
 
+//GIN
 .style1 {
     background-color: var(--clr-1);
+    height: 32vh;
+    padding: 100px 65px;
 }
+
+//VODKA
 .style2 {
     background-color: var(--clr-2);
+    height: 32vh;
+    padding: 100px 65px;
 }
+
+//RUM
 .style3 {
     background-color: var(--clr-3);
+    height: 32vh;
+    padding: 100px 65px;
 }
+
+//SCOTCH
 .style4 {
     background-color: var(--clr-4);
+    height: 32vh;
+    padding: 100px 65px;
 }
+
+
+//NONALK
 .style5 {
     background-color: var(--clr-5);
+    height: 32vh;
+    padding: 100px 65px;
 }
+
+//RANDOM
 .style6 {
     background-color: var(--clr-6);
+    height: 32vh;
+    padding: 100px 65px;
 }
