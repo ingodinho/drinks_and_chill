@@ -37,12 +37,7 @@ const AddCocktail = () => {
 
     return (
         <div className="addYourCocktail_container">
-            <Navbar />
-            <article>
-                <h2> Cocktails & Drinks!</h2>
-                <p>Welcome to the world of Cocktails & Drinks!</p>
-            </article>
-
+            {/* <Navbar /> */}
             <form onSubmit={handleSubmit}>
                 <div className="addName">
                     <input
