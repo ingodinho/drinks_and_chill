@@ -3,12 +3,12 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import HomeList from './pages/HomeList';
-import Header from './components/Header';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
 import Navbar from './components/Navbar';
+import Contact from "./pages/Contact";
 
 function App() {
 	const [search, setSearch] = useState('');
@@ -29,7 +29,7 @@ function App() {
 		<div className='App'>
 			<Navbar />
 			{location.pathname !== '/addCocktail' && (
-				<Search searchHandler={searchHandler} valid={valid} value={search}/>
+				<Search searchHandler={searchHandler} valid={valid} value={search} />
 			)}
 			<AnimatePresence>
 				<Routes>

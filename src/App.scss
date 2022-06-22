@@ -80,6 +80,7 @@ a {
 .head_menu_flex {
     display: flex;
     justify-content: space-between;
+    padding: 3%;
 }
 
 .navbarMenu {
@@ -106,6 +107,15 @@ a {
         font-weight: bold;
         font-size: 3rem;
         text-align: center;
+    }
+
+    nav ul li:hover {
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        color: #6FC3DF;
+
     }
 
     .nav {
@@ -177,4 +187,3 @@ a {
         margin: 0 auto;
     }
 }
-

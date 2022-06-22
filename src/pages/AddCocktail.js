@@ -29,7 +29,6 @@ const AddCocktail = () => {
             body: JSON.stringify(userAddCocktail)
         }).then(() => {
             console.log('new Cocktail added')
-            console.log()
         })
     }
 
