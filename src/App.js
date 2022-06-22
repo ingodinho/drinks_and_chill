@@ -8,13 +8,13 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
-import Navbar from './components/Navbar';
 
 function App() {
 	const [search, setSearch] = useState('');
 	const [valid, setValid] = useState(true);
 
 	const searchHandler = (e) => {
+		console.log('searchhandler', e);
 		setSearch(e);
 	};
 
@@ -28,7 +28,7 @@ function App() {
 		<div className='App'>
 			<Header />
 			{location.pathname !== '/addCocktail' && (
-				<Search searchHandler={searchHandler} valid={valid} />
+				<Search searchHandler={searchHandler} valid={valid} value={search}/>
 			)}
 			<AnimatePresence>
 				<Routes>

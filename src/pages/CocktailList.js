@@ -4,27 +4,27 @@ import CocktailListItem from '../components/CocktailListItem';
 import './CocktailList.scss';
 import { motion } from 'framer-motion';
 
-const CocktailList = (props) => {
+const CocktailList = ({search, validHandler}) => {
 	const { state } = useLocation();
 	const [drinks, setDrinks] = useState([]);
-	const [link, setLink] = useState(state)
-	// let link = state;
-
+	
 	useEffect(() => {
-		if (props.search) {
-			setLink(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${props.search}`);
+		let link = state;
+
+		if (search) {
+			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
 		}
-		else setLink(state);
+		else link = state;
 		fetch(link)
 			.then((response) => response.json())
 			.then((json) => {
 				if (json.drinks) {
 					setDrinks(json.drinks);
-					props.validHandler(true);
+					validHandler(true);
 				}
-				!json.drinks && props.validHandler(false);
+				!json.drinks && validHandler(false);
 			});
-	}, [props.search]);
+	}, [search, state, validHandler]);
 
 	return (
 		<motion.div
