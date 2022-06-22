@@ -1,10 +1,7 @@
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import '../App.scss';
 
 const HomeList = (props) => {

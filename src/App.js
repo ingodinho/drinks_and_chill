@@ -9,6 +9,7 @@ import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
 import Navbar from './components/Navbar';
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
 	const [search, setSearch] = useState('');
@@ -33,7 +34,7 @@ function App() {
 			)}
 			<AnimatePresence>
 				<Routes>
-					<Route path='/' element={<HomeList search={search} searchHandler={searchHandler}/>} />
+					<Route path='/' element={<HomeList search={search} searchHandler={searchHandler} />} />
 					<Route
 						path='/cocktails'
 						element={

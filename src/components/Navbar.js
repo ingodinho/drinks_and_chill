@@ -19,7 +19,8 @@ const Navbar = () => {
                 <div className="burger"></div>
             </div>
             <div className="head_menu_flex">
-                <p className='p1Nav'>DRINKS&CHILL</p>
+                <Link to="/">
+                    <p className='p1Nav'>DRINKS&CHILL</p></Link>
                 <button className="Menu" onClick={clickHandler}>{drop ? <X size={32} color="#fff" /> : "MENU"}</button>
             </div>
             <nav className={drop ? "nav nav_active" : "nav"}>
