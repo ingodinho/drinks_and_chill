@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../App.scss';
 
-const HomeList = () => {
+const HomeList = (props) => {
 
 	return (
 
@@ -28,6 +28,7 @@ const HomeList = () => {
 						name={el.name}
 						desc={el.description}
 						url={el.url}
+						searchHandler={props.searchHandler}
 					/>
 				))}
 			</div>

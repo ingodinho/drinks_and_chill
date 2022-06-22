@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import {X} from 'phosphor-react';
 
 const Navbar = () => {
-    const [drop, setDrop] = useState(false)
+    const [drop, setDrop] = useState(false);
     const clickHandler = () => {
-        setDrop(!drop)
+        setDrop(!drop);
+        document.body.classList.toggle('no-overflow');
     }
 
     return (
@@ -18,7 +20,7 @@ const Navbar = () => {
             </div>
             <div className="head_menu_flex">
                 <p className='p1Nav'>DRINKS&CHILL</p>
-                <button className="Menu" onClick={clickHandler}>{drop ? "x" : "MENU"}</button>
+                <button className="Menu" onClick={clickHandler}>{drop ? <X size={32} color="#fff"/> : "MENU"}</button>
             </div>
             <nav className={drop ? "nav nav_active" : "nav"}>
                 <ul>
@@ -29,7 +31,9 @@ const Navbar = () => {
                 </ul>
             </nav>
             <section className="headerTextSection">
-                <h1 className="h1Header">Cocktails & <span> </span>Drinks!</h1>
+                <Link to='/'>
+                    <h1 className="h1Header">Cocktails & <span> </span>Drinks!</h1>
+                </Link>
                 <p className="pHeader">WELCOME TO THE WORLD OF COCKTAILS AND DRINKS!</p>
             </section>
         </section>
