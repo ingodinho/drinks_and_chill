@@ -124,9 +124,20 @@ a {
         transform: translateY(0%);
         z-index: 10;
     }
-
 }
 
+.addCokeDiv {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.addCokeDiv:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -166,3 +177,4 @@ a {
         margin: 0 auto;
     }
 }
+

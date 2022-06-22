@@ -7,7 +7,6 @@ const Header = () => {
             <nav className="navbar">
 
                 <p className='p1Nav'>DRINKS&CHILL</p>
-
             </nav>
             <Navbar />
             <section className="headerTextSection">

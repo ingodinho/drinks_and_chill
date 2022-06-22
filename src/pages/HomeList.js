@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import '../App.scss';
 
 const HomeList = () => {
 
@@ -30,7 +31,9 @@ const HomeList = () => {
 					/>
 				))}
 			</div>
-			<Link to="/addCocktail" className='addcoke'>Add Cocktail</Link>
+			<div className="addCokeDiv">
+				<Link to="/addCocktail" className='addcoke'>+ Add Your Own Cocktail</Link>
+			</div>
 		</motion.div>
 	)
 };
