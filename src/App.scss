@@ -72,7 +72,7 @@ a {
 
     form div input,
     form div textarea {
-        width: 50%;
+        width: 85%;
     }
 }
 
@@ -81,6 +81,7 @@ a {
 .head_menu_flex {
     display: flex;
     justify-content: space-between;
+    padding: 5rem 5% 0 5%;
 }
 
 .navbarMenu {
@@ -95,7 +96,7 @@ a {
     }
 
     nav {
-        margin-top: 2%;
+        margin-top: 2vh;
     }
 
     nav ul {
@@ -105,14 +106,16 @@ a {
     nav ul li {
         line-height: 1.5;
         font-weight: bold;
-        font-size: 3rem;
+        font-size: 6rem;
         text-align: center;
     }
 
     .nav {
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: 20vh;
         height: 100vh;
         background-color: #262B46;
         width: 100vw;
@@ -179,3 +182,6 @@ a {
     }
 }
 
+.no-overflow {
+    overflow: hidden;
+}

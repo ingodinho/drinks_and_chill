@@ -1,50 +1,55 @@
-.addCocktailSection {
-    margin-left: 50px;
+.form_add_cocktail {
+
+    input,textarea {
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
 }
 
-.addName {
-    margin: 5px 0;
-}
+// .addName {
+//     margin: 5px 0;
+// }
 
-.addCategory {
-    margin: 5px 0;
-}
+// .addCategory {
+//     margin: 5px 0;
+// }
 
-.addURL {
-    margin: 5px 0;
-}
+// .addURL {
+//     margin: 5px 0;
+// }
 
-.addInstructions {
-    margin: 5px 0;
-}
+// .addInstructions {
+//     margin: 5px 0;
+// }
 
-.addIngredient1 {
-    margin: 5px 0;
-}
+// .addIngredient1 {
+//     margin: 5px 0;
+// }
 
-.addMeasure1 {
-    margin: 5px 0;
-}
+// .addMeasure1 {
+//     margin: 5px 0;
+// }
 
-.addIngredient2 {
-    margin: 5px 0;
-}
+// .addIngredient2 {
+//     margin: 5px 0;
+// }
 
-.addMeasure2 {
-    margin: 5px 0;
-}
+// .addMeasure2 {
+//     margin: 5px 0;
+// }
 
-.addIngredient3 {
-    margin: 5px 0;
-}
+// .addIngredient3 {
+//     margin: 5px 0;
+// }
 
-.addMeasure3 {
-    margin: 5px 0;
-    margin-bottom: 25px;
-}
+// .addMeasure3 {
+//     margin: 5px 0;
+//     margin-bottom: 25px;
+// }
 
 .submitBtn {
-    margin-top: 5px;
+    margin-top: 2rem;
 }
 
 .submitAdd {
@@ -53,48 +58,81 @@
     padding: 6px;
     letter-spacing: 1px;
     color: white;
-    font-weight: bold;
     background-color: #8D82C4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submitAdd:hover {
+    box-shadow: 1px 1px 0px #8D82C4;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .inputFeldAdd {
-    padding: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .goBackBttn {
+    padding: 10rem 0 0 0;
     font-size: 20px;
-    margin-left: 10%;
-    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
 }
+
 
 .goBack:hover {
     text-decoration: underline;
     text-shadow: 1px 1px 2px whitesmoke;
 }
 
-.emojiPfeil:hover {
-    text-decoration: none;
-    text-shadow: 1px 1px 2px #64819D;
+.inputArticle {
+    flex-basis: 40%;
+    text-align: center;
+    padding: 0 5%;
 }
 
 
-.div_img1 {
+.addCocktailSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.divBilder {
     position: relative;
+    flex-basis: 60%;
+    margin: 0 5rem 0 0;
+}
+
+.div_img1 {
     content: url("../img/image\ 9.png");
-    left: 50vh;
-    top: -50vh;
+    transform: scale(1.1);
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    z-index: 1;
 }
 
 .div_img2 {
-    position: relative;
     content: url("../img/image\ 10.png");
-    left: 80vh;
-    top: -80vh;
+    transform: scale(1.1);
+    position: absolute;
+    top: -5rem;
+    left: 60%;
+    z-index: 1;
 }
 
 .div_img3 {
-    position: relative;
     content: url("../img/image\ 11.png");
-    left: 54vh;
-    top: -88vh;
+    transform: scale(1.1);
+    position: absolute;
+    top: 30rem;
+    left: 10rem;
+    z-index: 1;
 }

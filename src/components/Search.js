@@ -37,8 +37,6 @@ const Search = (props) => {
 		// setInput(e.target.textContent);
 	};
 
-	const looseFocus = (e) => {};
-
 	const animatedLi = {
 		initial: { opacity: 0},
 		animate: { opacity: 1},
@@ -83,7 +81,7 @@ const Search = (props) => {
 									exit={animatedLi.exit}
 									onClick={onclickHandler}
 								>
-									Tequila Sunrise
+									Sunrise
 								</motion.li>
 								<motion.li
 									initial={animatedLi.initial}
@@ -99,7 +97,7 @@ const Search = (props) => {
 									exit={animatedLi.exit}
 									onClick={onclickHandler}
 								>
-									Sex on the Beach
+									Sex
 								</motion.li>
 							</motion.ul>
 						)}
