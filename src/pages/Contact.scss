@@ -1,0 +1,71 @@
+.contact_container h2,
+.contact_container p {
+    margin-left: 4rem;
+    font-family: (--fnt-play);
+}
+
+.contact_container h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-family: var(--fnt-play);
+}
+
+.contact_container p {
+    margin-top: 2vh;
+    font-size: 1.25rem;
+    font-family: var(--fnt-mont);
+    line-height: 1.5;
+}
+
+form {
+    margin-left: 4rem;
+    margin-top: 5vh;
+}
+
+form label {
+    font-size: 1.25rem;
+}
+
+form div {
+    margin: 1vh 0;
+}
+
+form div input,
+form div textarea {
+    width: 40%;
+    font-family: inherit;
+    padding: 0.6rem 4rem;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    font-family: inherit;
+    padding: 0.6rem 4rem;
+    background-color: var(--clr-2);
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        text-align: center;
+        padding: 0 5%;
+        margin: 5vh 0;
+    }
+
+    form div input {
+        width: 80%;
+    }
+
+    form div textarea {
+        width: 80%;
+    }
+
+    form input {
+        width: 80%;
+    }
+}

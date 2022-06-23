@@ -7,7 +7,7 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 
@@ -27,10 +27,11 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Navbar />
-			{location.pathname !== '/addcocktail' && (
-				<Search searchHandler={searchHandler} valid={valid} value={search} validHandler={validHandler} />
-			)}
+			<Header />
+			{location.pathname === '/' || location.pathname === '/cocktails' ?
+				<Search searchHandler={searchHandler} valid={valid} value={search} validHandler={validHandler} /> :
+				""
+			}
 			<AnimatePresence>
 				<Routes>
 					<Route path='/' element={<HomeList search={search} searchHandler={searchHandler} />} />
@@ -44,6 +45,8 @@ function App() {
 						}
 					/>
 					<Route path='/addcocktail' element={<AddCocktail />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/contact' element={<Contact />} />
 				</Routes>
 			</AnimatePresence>
 			<Footer />

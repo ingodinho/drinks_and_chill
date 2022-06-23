@@ -112,7 +112,7 @@ const Search = (props) => {
 				</div>
 				<div
 					className='search_invalid'
-					style={{ visibility: props.valid ? 'hidden' : 'visible' }}
+					style={{ display: props.valid ? 'none' : 'block' }}
 				>
 					<h3>Sorry, your search seems invalid</h3>
 					<p>Please check your input again.</p>

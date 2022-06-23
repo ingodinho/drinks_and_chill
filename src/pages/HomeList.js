@@ -15,7 +15,6 @@ const HomeList = (props) => {
 			exit={{ opacity: 0 }}
 			key={1}
 		>
-			{/* <Navbar /> */}
 			<div className='list_grid'>
 				{categories.map((el, i) => (
 					<HomeListItems
@@ -30,7 +29,7 @@ const HomeList = (props) => {
 				))}
 			</div>
 			<div className="addCokeDiv">
-				<Link to="/addCocktail" className='addcoke'>+ Add Your Own Cocktail</Link>
+				<Link to="/addcocktail" className='addcoke'>+ Add Your Own Cocktail</Link>
 			</div>
 		</motion.div>
 	)

@@ -1,23 +1,75 @@
+.head_menu_flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 5% 0 5%;
+}
+
+.navbarMenu {
+    font-family: 'Playfair Display', serif;
+
+    button {
+        border: none;
+        background-color: #262B46;
+        color: white;
+        font-family: Montserrat;
+        cursor: pointer;
+    }
+
+    nav {
+        margin-top: 2vh;
+    }
+
+    nav ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: 6rem;
+        text-align: center;
+    }
+
+    nav ul li:hover {
+        line-height: 1.5;
+        font-weight: bold;
+        font-size: rem;
+        text-align: center;
+        color: var(--clr-1)
+    }
+
+    .nav {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20vh;
+        height: 100vh;
+        background-color: #262B46;
+        width: 100vw;
+        transform: translateY(-150%);
+        position: absolute;
+        transition: transform 500ms;
+    }
+
+    .nav_active {
+        transform: translateY(0%);
+        z-index: 10;
+    }
+}
+
 .header {
-    // height: 30vh;
     background: #262B46;
     font-family: 'Playfair Display', serif;
-    // padding: 10px 20px;
-
-
 }
 
 .navbar {
-    // display: flex;
-    // justify-content: space-between;
     font-size: 1.25rem;
-
 }
 
 .p1Nav {
     letter-spacing: 2px;
     font-weight: bold;
-
 }
 
 .p2Nav {
