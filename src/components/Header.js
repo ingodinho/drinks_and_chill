@@ -36,15 +36,15 @@ const Header = () => {
 			<nav className={drop ? 'nav nav_active' : 'nav'}>
 				<ul>
 					<li onClick={clickHandler}>
-						<Link on to={'/'}>
+						<Link to={'/'}>
 							Home
 						</Link>
 					</li>
 					<li onClick={clickHandler}>
 						<Link to={'/addCocktail'}>Add Cocktail</Link>
 					</li>
-					<li>About</li>
-					<li>Contact</li>
+					<li onClick={clickHandler}> <Link to={'/about'}>About</Link> </li>
+					<li onClick={clickHandler}> <Link to={'/contact'}>Contact</Link> </li>
 				</ul>
 			</nav>
 			<section className='headerTextSection'>

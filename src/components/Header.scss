@@ -41,6 +41,11 @@
                 font-weight: bold;
                 font-size: 6rem;
                 text-align: center;
+                transition: color 400ms;
+
+                &:hover {
+                    color: var(--clr-1)
+                }
             }
         }
     }

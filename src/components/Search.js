@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Search.scss';
 
 const Search = (props) => {
-	console.log(props);
 	const [focus, setFocus] = useState(false);
 	const [input, setInput] = useState('');
 	const location = useLocation();
