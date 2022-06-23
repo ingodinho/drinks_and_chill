@@ -1,69 +1,55 @@
+
+.addYourCocktail_container {
+
+    a {
+        color: white;
+        transition: all 300ms;
+    }
+
+    form div input,
+    form div textarea {
+        width: 80%;
+    }
+}
+
+.addCokeDiv {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.addCokeDiv:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+
+
 .form_add_cocktail {
 
     input,textarea {
         border-radius: 5px;
         margin: 5px 0;
     }
-
 }
-
-// .addName {
-//     margin: 5px 0;
-// }
-
-// .addCategory {
-//     margin: 5px 0;
-// }
-
-// .addURL {
-//     margin: 5px 0;
-// }
-
-// .addInstructions {
-//     margin: 5px 0;
-// }
-
-// .addIngredient1 {
-//     margin: 5px 0;
-// }
-
-// .addMeasure1 {
-//     margin: 5px 0;
-// }
-
-// .addIngredient2 {
-//     margin: 5px 0;
-// }
-
-// .addMeasure2 {
-//     margin: 5px 0;
-// }
-
-// .addIngredient3 {
-//     margin: 5px 0;
-// }
-
-// .addMeasure3 {
-//     margin: 5px 0;
-//     margin-bottom: 25px;
-// }
 
 .submitBtn {
     margin-top: 2rem;
 }
 
 .submitAdd {
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     padding: 6px;
     letter-spacing: 1px;
-    color: white;
-    background-color: #8D82C4;
+    color: #fff;
+    background-color: var(--clr-2);
     font-family: 'Montserrat', sans-serif;
 }
 
 .submitAdd:hover {
-    box-shadow: 1px 1px 0px #8D82C4;
+    box-shadow: 1px 1px 0px var(--clr-2);
     text-decoration: underline;
     font-weight: bold;
 }
@@ -78,13 +64,12 @@
 
 .goBackBttn {
     padding: 10rem 0 0 0;
-    font-size: 20px;
+    font-size: 2rem;
     text-align: center;
     font-weight: bold;
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
 }
-
 
 .goBack:hover {
     text-decoration: underline;
@@ -103,36 +88,32 @@
     justify-content: space-between;
 }
 
-
-.divBilder {
+.addCocktail_imgs {
     position: relative;
     flex-basis: 60%;
     margin: 0 5rem 0 0;
 }
 
-.div_img1 {
-    content: url("../img/image\ 9.png");
-    transform: scale(1.1);
+.addCocktail_img {
     position: absolute;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.addCocktail_img_1 {
+    content: url("../img/image\ 9.png");
     top: 4rem;
     left: 4rem;
-    z-index: 1;
 }
 
-.div_img2 {
+.addCocktail_img_2 {
     content: url("../img/image\ 10.png");
-    transform: scale(1.1);
-    position: absolute;
     top: -5rem;
     left: 60%;
-    z-index: 1;
 }
 
-.div_img3 {
+.addCocktail_img_3 {
     content: url("../img/image\ 11.png");
-    transform: scale(1.1);
-    position: absolute;
     top: 30rem;
     left: 10rem;
-    z-index: 1;
 }

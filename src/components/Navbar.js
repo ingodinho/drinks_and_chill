@@ -1,3 +1,4 @@
+import './Navbar.scss'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -12,15 +13,13 @@ const Navbar = () => {
 
     return (
         <section className="navbarMenu">
-
             <div className="burger_container" onClick={clickHandler} >
                 <div className="burger"></div>
                 <div className="burger"></div>
                 <div className="burger"></div>
             </div>
             <div className="head_menu_flex">
-                <Link to="/">
-                    <p className='p1Nav'>DRINKS&CHILL</p></Link>
+                <p className='p1Nav'>DRINKS&CHILL</p>
                 <button className="Menu" onClick={clickHandler}>{drop ? <X size={32} color="#fff" /> : "MENU"}</button>
             </div>
             <nav className={drop ? "nav nav_active" : "nav"}>

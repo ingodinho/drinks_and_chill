@@ -1,6 +1,6 @@
 import './App.scss';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import HomeList from './pages/HomeList';
 import Search from './components/Search';
@@ -16,7 +16,6 @@ function App() {
 	const [valid, setValid] = useState(true);
 
 	const searchHandler = (e) => {
-		console.log('searchhandler', e);
 		setSearch(e);
 	};
 
@@ -29,8 +28,8 @@ function App() {
 	return (
 		<div className='App'>
 			<Navbar />
-			{location.pathname !== '/addCocktail' && (
-				<Search searchHandler={searchHandler} valid={valid} value={search} />
+			{location.pathname !== '/addcocktail' && (
+				<Search searchHandler={searchHandler} valid={valid} value={search} validHandler={validHandler} />
 			)}
 			<AnimatePresence>
 				<Routes>
@@ -44,7 +43,7 @@ function App() {
 							/>
 						}
 					/>
-					<Route path='/addCocktail' element={<AddCocktail />} />
+					<Route path='/addcocktail' element={<AddCocktail />} />
 				</Routes>
 			</AnimatePresence>
 			<Footer />

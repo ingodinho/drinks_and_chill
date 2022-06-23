@@ -169,10 +169,10 @@ const AddCocktail = () => {
 						</div>
 					</form>
 				</article>
-				<div className='divBilder'>
-					<div className='div_img1'></div>
-					<div className='div_img2'></div>
-					<div className='div_img3'></div>
+				<div className='addCocktail_imgs'>
+					<div className='addCocktail_img addCocktail_img_1'></div>
+					<div className='addCocktail_img addCocktail_img_2'></div>
+					<div className='addCocktail_img addCocktail_img_3'></div>
 				</div>
 			</section>
 			<div className='goBackBttn'>
