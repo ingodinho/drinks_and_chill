@@ -7,7 +7,7 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import CocktailList from './pages/CocktailList';
 import AddCocktail from './pages/AddCocktail';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 function App() {
 	const [search, setSearch] = useState('');
@@ -25,7 +25,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Navbar />
+			<Header />
 			{location.pathname !== '/addcocktail' && (
 				<Search searchHandler={searchHandler} valid={valid} value={search} validHandler={validHandler}/>
 			)}
