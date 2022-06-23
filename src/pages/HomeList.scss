@@ -1,0 +1,64 @@
+// =========================================================================
+//                                  KACHEL COLORS
+// ========================================================================= 
+
+.list_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 32rem;
+    align-items: stretch;
+    align-content: center;
+}
+
+.home_list_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 10%;
+}
+
+// =========================================================================
+//                                  KACHEL COLORS
+// ========================================================================= 
+
+.item_left {
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+.item_right {
+    flex-direction: row-reverse;
+    padding-right: 10%;
+}
+
+.style1 {
+    background-color: var(--clr-1);
+}
+
+.style2 {
+    background-color: var(--clr-2);
+}
+
+.style3 {
+    background-color: var(--clr-3);
+}
+
+.style4 {
+    background-color: var(--clr-4);
+}
+
+
+.style5 {
+    background-color: var(--clr-5);
+}
+
+.style6 {
+    background-color: var(--clr-6);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .list_grid {
+        grid-template-columns: 1fr;
+    }
+}

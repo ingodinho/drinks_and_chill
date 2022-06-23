@@ -1,8 +1,9 @@
+import './HomeList.scss';
+
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import '../App.scss';
 
 const HomeList = (props) => {
 

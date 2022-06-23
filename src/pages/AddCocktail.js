@@ -177,8 +177,7 @@ const AddCocktail = () => {
 			</section>
 			<div className='goBackBttn'>
 				<Link className='goBack' to='/'>
-					{' '}
-					<span className='emojiPfeil'>⬅️ </span>Back to Home
+					{' '}Back to Home
 				</Link>
 			</div>
 		</div>

@@ -1,7 +1,9 @@
 .head_menu_flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5rem 5% 0 5%;
+    height: 10rem;
 }
 
 .navbarMenu {
@@ -11,32 +13,11 @@
         border: none;
         background-color: #262B46;
         color: white;
-        font-family: Montserrat;
+        font-family: var(--fnt-mont);
         cursor: pointer;
     }
 
-    nav {
-        margin-top: 2vh;
-    }
-
-    nav ul {
-        list-style: none;
-    }
-
-    nav ul li {
-        line-height: 1.5;
-        font-weight: bold;
-        font-size: 6rem;
-        text-align: center;
-    }
-
-    nav ul li:hover {
-        line-height: 1.5;
-        font-weight: bold;
-        font-size: rem;
-        text-align: center;
-        color: var(--clr-1)
-    }
+    // OVERLAY MENU
 
     .nav {
         overflow: hidden;
@@ -50,6 +31,18 @@
         transform: translateY(-150%);
         position: absolute;
         transition: transform 500ms;
+        margin-top: 2vh;
+
+        ul {
+            list-style: none;
+
+            li {
+                line-height: 1.5;
+                font-weight: bold;
+                font-size: 6rem;
+                text-align: center;
+            }
+        }
     }
 
     .nav_active {
@@ -58,13 +51,12 @@
     }
 }
 
-.header {
-    background: #262B46;
-    font-family: 'Playfair Display', serif;
+.burger_container {
+    display: none;
 }
 
-.navbar {
-    font-size: 1.25rem;
+.burger_menu_x {
+    display: none;
 }
 
 .p1Nav {
@@ -73,19 +65,53 @@
 }
 
 .p2Nav {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fnt-mont);
 }
 
 .headerTextSection {
-    margin: 100px 50px;
+    margin: 10rem 5rem;
 }
 
 .h1Header {
     font-size: 4.5rem;
-    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
 }
 
 .pHeader {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fnt-mont);
     font-size: 1.25rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .head_menu_flex {
+        padding: 1rem 5% 0 5%;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .burger_container {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 0 5%;
+    }
+
+    .burger {
+        cursor: pointer;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+    }
+
+    .burger_menu_x {
+        display: block;
+    }
+
+
 }
