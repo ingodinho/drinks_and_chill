@@ -7,11 +7,11 @@ const HomeListItems = (props) => {
 	}
 
 	return (
-		<Link to={'/cocktails'} state={props.url} onClick={onClickHandler}>
-			<div className={`home_list_item ${props.className}`} >
-				<h2>{props.name}</h2>
-				<p>{props.desc}</p>
-			</div>
+		<Link to={'/cocktails'} state={props.url} onClick={onClickHandler} className={`home_list_item ${props.className}`}>
+				<div className="home_list_item_flex">
+					<h2>{props.name}</h2>
+					<p>{props.desc}</p>
+				</div>
 		</Link>
 	);
 };

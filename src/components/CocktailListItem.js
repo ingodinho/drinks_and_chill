@@ -24,7 +24,7 @@ const CocktailListItem = (props) => {
 	return (
 		<>
 			<motion.div
-				className={`cocktail_list_item style ${props.className}`}
+				className={`cocktail_list_item ${props.className}`}
 				onClick={() => setisOpen(!isOpen)}
 			>
 				<img src={props.img} alt='cocktail' className='cocktail_list_item_img'/>

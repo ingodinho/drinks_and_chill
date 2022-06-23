@@ -55,36 +55,7 @@ a {
     text-decoration: none;
 }
 
-.list_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-}
-
-
 @media only screen and (max-width: 600px) {
-    .list_grid {
-        grid-template-columns: 1fr;
-    }
-
-    // burger button
-    .Menu {
-        display: none;
-    }
-
-    .burger_container {
-        margin-top: 5%;
-    }
-
-    .burger {
-        position: relative;
-        cursor: pointer;
-        left: 85%;
-        width: 35px;
-        height: 5px;
-        background-color: rgb(255, 255, 255);
-        margin: 6px 0;
-    }
 
     // DRINKS&CHILL 
 

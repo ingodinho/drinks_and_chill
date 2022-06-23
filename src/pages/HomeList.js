@@ -1,8 +1,9 @@
+import './HomeList.scss';
+
 import categories from '../components/categories';
 import HomeListItems from '../components/HomeListItems';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import '../App.scss';
 
 const HomeList = (props) => {
 
@@ -30,7 +31,7 @@ const HomeList = (props) => {
 				))}
 			</div>
 			<div className="addCokeDiv">
-				<Link to="/addCocktail" className='addcoke'>+ Add Your Own Cocktail</Link>
+				<Link to="/addcocktail" className='addcoke'>+ Add Your Own Cocktail</Link>
 			</div>
 		</motion.div>
 	)

@@ -5,7 +5,6 @@ import {X} from 'phosphor-react';
 
 const DetailModal = (props) => {
 	const [details, setDetails] = useState([]);
-	console.log(details);
 
 	useEffect(() => {
 		fetch(
@@ -14,18 +13,6 @@ const DetailModal = (props) => {
 			.then((response) => response.json())
 			.then((json) => setDetails(json.drinks[0]));
 	}, [props.id]);
-
-	// const modalAnimation = {
-	// 	hidden: {
-	// 		opacity: 0
-	// 	},
-	// 	visible: {
-	// 		opacity: 1
-	// 	},
-	// 	exit: {
-	// 		opacity: 0
-	// 	}
-	// }
 
 	return (
 			<motion.div
@@ -38,9 +25,8 @@ const DetailModal = (props) => {
 				<div className='modal_grid'>
 					<div className="modal_grid_img_div"><img src={details.strDrinkThumb} alt='' className='modal_grid_img'/></div>
 					<article className='modal_article'>
-						<h1>{details.strDrink}</h1>
-						<h2>Ingredients</h2>
-						{/* <p>{details.strGlass}</p> */}
+						<h3>{details.strDrink}</h3>
+						<h4>Ingredients</h4>
 						<p>
 							{details.strMeasure1} {details.strIngredient1}
 						</p>
