@@ -16,7 +16,6 @@ const HomeList = (props) => {
 			exit={{ opacity: 0 }}
 			key={1}
 		>
-			{/* <Navbar /> */}
 			<div className='list_grid'>
 				{categories.map((el, i) => (
 					<HomeListItems

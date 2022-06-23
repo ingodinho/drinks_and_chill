@@ -35,7 +35,6 @@ const AddCocktail = () => {
 			body: JSON.stringify(userAddCocktail),
 		}).then(() => {
 			console.log('new Cocktail added');
-			console.log();
 		});
 	};
 
@@ -53,7 +52,7 @@ const AddCocktail = () => {
 								placeholder='Name'
 								value={strDrink}
 								onChange={(e) => setStrDrink(e.target.value)}
-                                required
+								required
 							/>
 						</div>
 						<div className='addCategory'>
@@ -64,7 +63,7 @@ const AddCocktail = () => {
 								placeholder='Category'
 								value={strCategory}
 								onChange={(e) => setStrCategory(e.target.value)}
-                                required
+								required
 							/>
 						</div>
 						<div className='addURL'>
@@ -77,7 +76,7 @@ const AddCocktail = () => {
 								onChange={(e) =>
 									setStrDrinkThumb(e.target.value)
 								}
-                                required
+								required
 							/>
 						</div>
 						<div className='addInstructions'>
@@ -91,7 +90,7 @@ const AddCocktail = () => {
 								}
 								cols='30'
 								rows='10'
-                                required
+								required
 							></textarea>
 						</div>
 						<div className='addIngredient1'>
@@ -104,7 +103,7 @@ const AddCocktail = () => {
 								onChange={(e) =>
 									setStrIngredient1(e.target.value)
 								}
-                                required
+								required
 							/>
 						</div>
 						<div className='addMeasure1'>

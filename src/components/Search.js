@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Search.scss';
 
 const Search = (props) => {
-	console.log(props);
 	const [focus, setFocus] = useState(false);
 	const [input, setInput] = useState('');
 	const location = useLocation();
@@ -135,7 +134,7 @@ const Search = (props) => {
 						</button>
 					</Link>
 				</div>
-			</div>
+			</div >
 			<div className='caret_double'>
 				<CaretDoubleDown
 					size={32}
@@ -143,7 +142,7 @@ const Search = (props) => {
 					className='caret_double_icon'
 				/>
 			</div>
-		</section>
+		</section >
 	);
 };
 

@@ -8,7 +8,7 @@
 
 .navbarMenu {
     font-family: 'Playfair Display', serif;
-    
+
     button {
         border: none;
         background-color: #262B46;
@@ -41,6 +41,11 @@
                 font-weight: bold;
                 font-size: 6rem;
                 text-align: center;
+                transition: color 400ms;
+
+                &:hover {
+                    color: var(--clr-1)
+                }
             }
         }
     }
@@ -62,7 +67,6 @@
 .p1Nav {
     letter-spacing: 2px;
     font-weight: bold;
-
 }
 
 .p2Nav {
@@ -90,29 +94,29 @@
         padding: 1rem 5% 0 5%;
     }
 
-        .Menu {
-            display: none;
-        }
-    
-        .burger_container {
-            display: block;
-            display: flex;
-            justify-content: flex-end;
-            text-align: right;
-            padding: 0 5%;
-        }
-    
-        .burger {
-            cursor: pointer;
-            width: 25px;
-            height: 2px;
-            background-color: rgb(255, 255, 255);
-            margin: 6px 0;
-        }
+    .Menu {
+        display: none;
+    }
 
-        .burger_menu_x {
-            display: block;
-        }
+    .burger_container {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding: 0 5%;
+    }
+
+    .burger {
+        cursor: pointer;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+    }
+
+    .burger_menu_x {
+        display: block;
+    }
 
 
 }
