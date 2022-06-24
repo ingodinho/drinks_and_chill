@@ -27,7 +27,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Header />
+			<Header searchHandler={searchHandler}/>
 			{location.pathname === '/' || location.pathname === '/cocktails' ?
 				<Search searchHandler={searchHandler} valid={valid} value={search} validHandler={validHandler} /> :
 				""
@@ -41,6 +41,7 @@ function App() {
 							<CocktailList
 								search={search}
 								validHandler={validHandler}
+								searchHandler={searchHandler}
 							/>
 						}
 					/>

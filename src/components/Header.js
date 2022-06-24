@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'phosphor-react';
 
-const Header = () => {
+const Header = ({searchHandler}) => {
 	const [drop, setDrop] = useState(false);
 	const clickHandler = () => {
+		searchHandler('');
 		setDrop(!drop);
 		document.body.classList.toggle('no-overflow');
 	};
@@ -15,7 +16,7 @@ const Header = () => {
 		<header className='navbarMenu'>
 			<div className='head_menu_flex'>
 				<Link to='/'>
-					<p className='p1Nav'>DRINKS&CHILL</p>
+					<p onClick={()=> searchHandler('')} className='p1Nav'>DRINKS&CHILL</p>
 				</Link>
 				<button className='Menu' onClick={clickHandler}>
 					{drop ? <X size={32} color='#fff' /> : 'MENU'}
@@ -48,7 +49,7 @@ const Header = () => {
 				</ul>
 			</nav>
 			<section className='headerTextSection'>
-				<Link to='/'>
+				<Link to='/' onClick={() => searchHandler('')}>
 					<h1 className='h1Header'>Cocktails & Drinks!</h1>
 				</Link>
 				<p className='pHeader'>
