@@ -162,7 +162,7 @@ const AddCocktail = () => {
 						</div>
 						<div className='submitBtn'>
 							<input
-								className='submitAdd'
+								className='submitAdd submit_hover'
 								type='submit'
 								value='Submit'
 							/>

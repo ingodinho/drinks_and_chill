@@ -18,7 +18,7 @@ const Contact = () => {
                 <div>
                     <textarea name="" cols="30" rows="10"></textarea>
                 </div>
-                <input type="submit" value="send" />
+                <input type="submit" value="send" className='submit_hover'/>
             </form>
         </div>
     )

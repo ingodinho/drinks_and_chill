@@ -2,7 +2,7 @@
 
     a {
         color: white;
-        transition: all 300ms;
+        transition: all 500ms;
     }
 
     form div input,
@@ -12,20 +12,6 @@
         padding: 0.6rem 4rem;
     }
 }
-
-.addCokeDiv {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.addCokeDiv:hover {
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px whitesmoke;
-}
-
 
 .form_add_cocktail {
 
@@ -51,8 +37,6 @@
 }
 
 .submitAdd:hover {
-    box-shadow: 1px 1px 0px var(--clr-2);
-    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -75,7 +59,7 @@
 
 .goBack:hover {
     text-decoration: underline;
-    text-shadow: 1px 1px 2px whitesmoke;
+    color: var(--clr-1);
 }
 
 .inputArticle {
