@@ -9,21 +9,26 @@ const CocktailList = ({search, validHandler}) => {
 	const [drinks, setDrinks] = useState([]);
 	
 	useEffect(() => {
-		let link = state;
-
-		if (search) {
-			link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
-		}
-		else link = state;
-		fetch(link)
-			.then((response) => response.json())
-			.then((json) => {
-				if (json.drinks) {
-					setDrinks(json.drinks);
-					validHandler(true);
-				}
-				!json.drinks && validHandler(false);
-			});
+		const timeOut = setTimeout(() => {
+			let link = state;
+	
+			if (search) {
+				link = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`;
+			}
+			else link = state;
+			fetch(link)
+				.then((response) => response.json())
+				.then((json) => {
+					if (json.drinks) {
+						setDrinks(json.drinks);
+						validHandler(true);
+					}
+					!json.drinks && validHandler(false);
+				});
+		},400);
+		return( () => {
+			clearTimeout(timeOut);
+		})
 	}, [search, state, validHandler]);
 
 	return (

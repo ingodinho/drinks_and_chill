@@ -18,7 +18,6 @@
 }
 
 // =========================================================================
-//                                  KACHEL COLORS
 // ========================================================================= 
 
 .item_left {
@@ -55,6 +54,21 @@
 .style6 {
     background-color: var(--clr-6);
 }
+
+.addCokeDiv {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: all 500ms linear;
+}
+
+.addCokeDiv:hover {
+    color: var(--clr-1);
+    text-decoration: underline;
+}
+
 
 
 @media only screen and (max-width: 600px) {

@@ -1,6 +1,6 @@
 .about_container h2,
-.about_container p {
-    // margin-left: 4rem;
+.about_container > p {
+    margin-left: 7rem;
     font-family: (--fnt-play);
 }
 
@@ -12,9 +12,13 @@
 
 .about_container p {
     margin-top: 2vh;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: var(--fnt-mont);
     line-height: 1.5;
+}
+
+.about_container > p {
+    width: 80%;
 }
 
 .about_images_container {
@@ -44,16 +48,11 @@
     }
 
     .about_image_kadi {
-        background-image: url("../img/Ingo.png");
+        background-image: url("../img/kadi.jpg");
     }
 
     .about_image_cipi {
         background-image: url("../img/cipi_sepia.jpg");
-    }
-
-    .about_image_headline {
-        // margin-left: 0;
-
     }
 
 }
