@@ -1,24 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { CaretDoubleDown, MagnifyingGlass, Heart } from 'phosphor-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import './Search.scss';
 
-const Search = (props) => {
+const Search = ({value, searchHandler, valid, validHandler}) => {
 	const [focus, setFocus] = useState(false);
 	const [input, setInput] = useState('');
 	const location = useLocation();
 	const navigate = useNavigate();
-
 	const chooseBorder = () => {
-		if (focus && props.valid) return '2px #6FC3DF solid';
-		else if (focus && !props.valid) return '4px #e03131 solid';
+		if (focus && valid) return '2px #6FC3DF solid';
+		else if (focus && !valid) return '4px #e03131 solid';
 		else return 'none';
 	};
 
+	useEffect(() => {
+		setInput(value);
+		validHandler(true);
+	},[value])
+
 	const inputStyles = {
-		color: !props.valid ? '#e03131' : 'black',
+		color: !valid ? '#e03131' : 'black',
 		border: chooseBorder(),
 		transition: 'all 100ms linear',
 	};
@@ -30,17 +34,17 @@ const Search = (props) => {
 			return;
 		}
 		if (location.pathname === '/cocktails') {
-			props.searchHandler(e.target.value);
+			searchHandler(e.target.value);
 		} else if (location.pathname === '/') {
 			navigate('/cocktails');
-			props.searchHandler(e.target.value);
+			searchHandler(e.target.value);
 		}
 		setInput(e.target.value);
 	};
 
 	const onclickHandler = (e) => {
 		navigate('/cocktails');
-		props.searchHandler(e.target.textContent);
+		searchHandler(e.target.textContent);
 	};
 
 	const animatedLi = {
@@ -111,7 +115,7 @@ const Search = (props) => {
 				</div>
 				<div
 					className='search_invalid'
-					style={{ display: props.valid ? 'none' : 'block' }}
+					style={{ display: valid ? 'none' : 'block' }}
 				>
 					<h3>Sorry, your search seems invalid</h3>
 					<p>Please check your input again.</p>
@@ -128,7 +132,7 @@ const Search = (props) => {
 					<Link to={'/addcocktail'}>
 						<button
 							className='add_cocktail_btn'
-							onClick={() => props.validHandler(true)}
+							onClick={() => validHandler(true)}
 						>
 							Add Cocktail
 						</button>
