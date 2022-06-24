@@ -10,12 +10,10 @@
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
-
 .modal_flex {
     display: flex;
     flex-direction: column;
 }
-
 .modal_x {
     display: flex;
     align-self: flex-start;
@@ -29,7 +27,6 @@
         font-size: 3rem;
     }
 }
-
 .modal_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -39,13 +36,11 @@
     align-self: center;
     padding: 2.5rem 5% 5rem 5%;
 }
-
 .modal_grid_img_div {
     text-align: center;
 }
-
 .modal_grid_img {
-    width: 100%;
+    width: 70%;
     object-fit: cover;
     object-position: center;
     aspect-ratio: 1/1;
